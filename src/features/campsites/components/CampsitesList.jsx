@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import React from 'react';
 import {Col, Row} from 'reactstrap';
 // import { CAMPSITES } from '../../../app/shared/CAMPSITES';
@@ -34,7 +35,8 @@ const CampsitesList = ({ campsite }) => {
 
 
     // end animation
-    const campsites = SelectAllCampsites()
+    const campsites = useSelector(SelectAllCampsites)
+    console.log(campsites);
     return (
        <animated.div style={animatedStyle}>
         <Row className='ms-auto'>

@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
 import DisplayCard from './displayCard';
 import AnimationCard from '../display/AnimatedDisplayCard';
@@ -8,11 +9,18 @@ import {selectFeaturedPartner} from '../../partners/partnersSlice'
 
 
 export const GetFeatures = () => {
-   const item = [selectFeaturedCampsites(), selectFeaturedPromotions(), selectFeaturedPartner()]
+   // const item = useSelector((state => [selectFeaturedCampsites(state), selectFeaturedPromotions(state), selectFeaturedPartner(state)]))
    
-
-  return (
-    <Row>
+   const item = useSelector((st) => [
+      selectFeaturedCampsites(st),
+      selectFeaturedPromotions(st),
+      selectFeaturedPartner(st)
+   ]);
+   
+   // console.log(item);
+   return (
+      
+      <Row>
       
        {item.map((data, indNum) => (
         data &&(

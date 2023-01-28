@@ -1,20 +1,24 @@
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from 'reactstrap'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import {validateCommentForm} from '../../../../utilities/validateCommentForm'
+import { addComment } from './commentsSlice';
 
 
 const CommentForm = ({campsiteId}) => {
    const [modalOpen, setModalOpen] = useState(false);
 
-
+   const dispatch = useDispatch();
    const handleSubmit = (values) => {
-      const comment ={
-      campsiteId: parseInt(campsiteId),
-      rating: values.rating,
-      author: values.author,
-      text: values.commentText
-      };
+      const comment = {
+         campsiteId:parseInt(campsiteId),
+         rating: values.rating,
+         author: values.author,
+         text: values.commentText,
+         date: new Date(Date.now()).toISOString()
+     };
+   dispatch(addComment(comment))
       console.log(`Normal form returned:`,comment);
       console.log(`JSON FORMAT:`,JSON.stringify(comment));
       setModalOpen(false)
@@ -95,7 +99,7 @@ const CommentForm = ({campsiteId}) => {
                         />
                         <ErrorMessage name='commentText'>
                      {(msg) => <span className='text-danger'>{msg}</span>}
-                  </ErrorMessage>
+                        </ErrorMessage>
                      </FormGroup>
 
                      <Button type='submit' color='primary'>

@@ -7,14 +7,14 @@ export const COMMENTS = [
         author: 'Simon Hunt',
         date: '2018-10-25T16:30Z'
     },
-    // {
-    //     id: 1,
-    //     campsiteId: 0,
-    //     rating: 3,
-    //     text: 'This lone monkey kept following us back to our tent.',
-    //     author: 'Zandra Katherine',
-    //     date: '2017-06-17T03:33Z'
-    // },
+    {
+        id: 1,
+        campsiteId: 0,
+        rating: 3,
+        text: 'This lone monkey kept following us back to our tent.',
+        author: 'Zandra Katherine',
+        date: '2017-06-17T03:33Z'
+    },
     {
         id: 2,
         campsiteId: 0,
@@ -39,46 +39,46 @@ export const COMMENTS = [
         author: 'R. E. Osariemen',
         date: '2018-07-23T19:44Z'
     },
-    // {
-    //     id: 5,
-    //     campsiteId: 1,
-    //     rating: 4,
-    //     text: "There's nothing more fun than setting up a tent in a rainstorm.",
-    //     author: 'Juan Cortez',
-    //     date: '2017-06-17T03:33Z'
-    // },
-    // {
-    //     id: 6,
-    //     campsiteId: 1,
-    //     rating: 5,
-    //     text: 'I caught a world-record-breaking trout here on my last visit.',
-    //     author: 'McKenzie Sebastian',
-    //     date: '2019-02-18T18:12Z'
-    // },
-    // {
-    //     id: 7,
-    //     campsiteId: 1,
-    //     rating: 5,
-    //     text: 'The campground was beautiful, but the bugs could bite sometimes.',
-    //     author: 'Brennen Ech',
-    //     date: '2019-08-04T20:11Z'
-    // },
-    // {
-    //     id: 8,
-    //     campsiteId: 1,
-    //     rating: 4,
-    //     text: "Love the river but I didn't catch any fish.",
-    //     author: 'Amy Keophilavong',
-    //     date: '2018-07-23T19:44Z'
-    // },
-    // {
-    //     id: 9,
-    //     campsiteId: 1,
-    //     rating: 5,
-    //     text: 'A wonderful place to reconnect with nature.',
-    //     author: 'Jordan Runn',
-    //     date: '2019-08-04T20:11Z'
-    // },
+    {
+        id: 5,
+        campsiteId: 1,
+        rating: 4,
+        text: "There's nothing more fun than setting up a tent in a rainstorm.",
+        author: 'Juan Cortez',
+        date: '2017-06-17T03:33Z'
+    },
+    {
+        id: 6,
+        campsiteId: 1,
+        rating: 5,
+        text: 'I caught a world-record-breaking trout here on my last visit.',
+        author: 'McKenzie Sebastian',
+        date: '2019-02-18T18:12Z'
+    },
+    {
+        id: 7,
+        campsiteId: 1,
+        rating: 5,
+        text: 'The campground was beautiful, but the bugs could bite sometimes.',
+        author: 'Brennen Ech',
+        date: '2019-08-04T20:11Z'
+    },
+    {
+        id: 8,
+        campsiteId: 1,
+        rating: 4,
+        text: "Love the river but I didn't catch any fish.",
+        author: 'Amy Keophilavong',
+        date: '2018-07-23T19:44Z'
+    },
+    {
+        id: 9,
+        campsiteId: 1,
+        rating: 5,
+        text: 'A wonderful place to reconnect with nature.',
+        author: 'Jordan Runn',
+        date: '2019-08-04T20:11Z'
+    },
     {
         id: 10,
         campsiteId: 2,

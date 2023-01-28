@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import { Container, Row } from 'reactstrap';
 import { useParams } from 'react-router-dom';
 import { GetCampsiteById } from '../campsitesSlice';
@@ -8,7 +9,7 @@ import SubHeader from '../components/SubHeader'
 
 const CampsiteDetailPage = () => {
    const { campsiteId } = useParams()
-   const getCampsitesId = GetCampsiteById(campsiteId)
+   const getCampsitesId = useSelector(GetCampsiteById(campsiteId))
 
 
 
