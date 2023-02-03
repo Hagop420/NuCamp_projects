@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
-import AnimationCard from '../components/display/AnimatedDisplayCard';
+// import AnimationCard from '../components/display/AnimatedDisplayCard';
 import {Link} from 'react-router-dom'
 
 const CampsiteCard = ({campsite}) => {
@@ -21,5 +21,5 @@ const CampsiteCard = ({campsite}) => {
    )
 }
 
-console.clear()
+// console.clear()
 export default CampsiteCard

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { GetCampsiteById } from '../campsitesSlice';
 import CampsiteDetail from '../components/CampsiteDetail'
 import CommentsList from '../components/Comments/CommentsList';
-import CommentPage from '../components/Comments/Comment'
+// import CommentPage from '../components/Comments/Comment'
 import SubHeader from '../components/SubHeader'
 
 const CampsiteDetailPage = () => {

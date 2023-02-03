@@ -4,7 +4,7 @@ import { Container } from 'reactstrap';
 import CampsitesList from '../features/campsites/components/CampsitesList';
 // import { SelectAllCampsites } from '../features/campsites/campsitesSlice';
 // import { SelectRandomCampsiteIndex } from '../features/campsites/campsitesSlice';
-import { GetCampsiteById } from '../features/campsites/campsitesSlice';
+// import { GetCampsiteById } from '../features/campsites/campsitesSlice';
 import SubHeader from '../../src/features/campsites/components/SubHeader'
 
 // import { useState } from 'react';
@@ -23,14 +23,19 @@ const CampsitesDirectoryPage = () => {
     // const [randomCampGroundId, ToggleCampsiteByIdOnly] = useState(0)
     // const selectCampsite=GetCampsiteById(randomCampGroundId)
         
-        // randomCampGround = SelectRandomCampsiteIndex()
+    //     randomCampGround = SelectRandomCampsiteIndex()
         
        
-        // console.log(randomCampGround);
+    //     console.log(randomCampGround);
         
-    // end
+    
 
     // console.log(currentCampsite);
+
+
+
+
+
     return (
         <Container>
             <SubHeader current='Directory' />

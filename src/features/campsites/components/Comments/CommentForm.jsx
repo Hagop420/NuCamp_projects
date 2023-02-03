@@ -6,8 +6,9 @@ import {validateCommentForm} from '../../../../utilities/validateCommentForm'
 import { addComment } from './commentsSlice';
 
 
-const CommentForm = ({campsiteId}) => {
+const CommentForm = ({ campsiteId }) => {
    const [modalOpen, setModalOpen] = useState(false);
+   console.log({ campsiteId });
 
    const dispatch = useDispatch();
    const handleSubmit = (values) => {
@@ -17,10 +18,10 @@ const CommentForm = ({campsiteId}) => {
          author: values.author,
          text: values.commentText,
          date: new Date(Date.now()).toISOString()
-     };
-   dispatch(addComment(comment))
-      console.log(`Normal form returned:`,comment);
-      console.log(`JSON FORMAT:`,JSON.stringify(comment));
+      };
+     console.log(`Normal form returned: ${comment}`);
+     // console.log(`JSON FORMAT:`,JSON.stringify(comment));
+      dispatch(addComment(comment));
       setModalOpen(false)
    }
    return (

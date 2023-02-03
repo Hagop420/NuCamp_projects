@@ -1,7 +1,7 @@
 import { Col } from 'reactstrap';
 import Comments from '../Comments/Comment';
 import { selectCommentsByCampsiteId } from './commentsSlice';
-import CommentFormModalOpenPage from './CommentForm'
+import CommentForm from './CommentForm'
 import { useSelector } from 'react-redux';
 
 
@@ -17,7 +17,7 @@ const CommentsList = ({campsiteId}) => {
             {comments.map(comms => {
                return <Comments key={comms.id} comms={comms} />
             })}
-            <CommentFormModalOpenPage />
+            <CommentForm campsiteId={campsiteId} />
          </Col>
       )
    }
