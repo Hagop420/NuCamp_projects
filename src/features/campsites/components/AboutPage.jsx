@@ -4,6 +4,7 @@ import PartnersList from '../partners/PartnersList'
 
 
 const AboutPage = () => {
+
    return (
       <Container>
          <SubHeader current='About Us'/>

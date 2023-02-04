@@ -7,7 +7,9 @@ import CampsiteCard from "./CampsiteCard";
 import {useSpring, animated} from 'react-spring'
 import { SelectAllCampsites } from '../campsitesSlice'
 import {useState, useEffect, useLayoutEffect} from 'react'
-import AnimatedDisplayCard from './display/AnimatedDisplayCard';
+import Error from './Error';
+import Loading from './Loading';
+
 // import { ToggleCampsiteByIdOnly } from '../../../pages/CamapsitesDirectoryPage'
 
 
@@ -18,7 +20,7 @@ const CampsitesList = ({ campsite }) => {
     const animatedStyle = useSpring({
        opacity: toggle ? 11 : 0,
        transform: toggle ? 'scale(1,1)' : 'scale(1,0)',
-       config:{duration:100}
+       config:{duration:150}
  
     })
  
@@ -27,16 +29,33 @@ const CampsitesList = ({ campsite }) => {
     }, [])
 
 
-
-
-
-
-
-
-
     // end animation
     const campsites = useSelector(SelectAllCampsites)
     console.log(campsites);
+
+
+
+    const isLoading = useSelector((state) => state.campsites.isLoading)
+    const err = useSelector((state) => state.campsites.errMsg)
+
+    if (isLoading) {
+        return (
+            <Row>
+                <Loading/>
+            </Row>
+        )
+    } 
+    
+
+    if (err) {
+        return (
+            <Row>
+                <Error errMsg={ err } />
+        </Row> 
+        )
+    }
+
+
     return (
        <animated.div style={animatedStyle}>
         <Row className='ms-auto'>
