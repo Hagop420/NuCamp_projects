@@ -67,4 +67,3 @@ export const selectFeaturedPartner = (state) => {
    
    return findPartnerFeature
 }
-

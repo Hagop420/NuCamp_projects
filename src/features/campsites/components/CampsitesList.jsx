@@ -36,7 +36,7 @@ const CampsitesList = ({ campsite }) => {
 
 
     const isLoading = useSelector((state) => state.campsites.isLoading)
-    const err = useSelector((state) => state.campsites.errMsg)
+    const errMsg = useSelector((state) => state.campsites.errMsg)
 
     if (isLoading) {
         return (
@@ -47,10 +47,10 @@ const CampsitesList = ({ campsite }) => {
     } 
     
 
-    if (err) {
+    if (errMsg) {
         return (
             <Row>
-                <Error errMsg={ err } />
+                <Error errMsg={ errMsg } />
         </Row> 
         )
     }

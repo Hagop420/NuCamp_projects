@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { Col, Row } from 'reactstrap';
-import DisplayCard from './displayCard';
+// import DisplayCard from './displayCard';
 import AnimationCard from '../display/AnimatedDisplayCard';
 import { selectFeaturedCampsites } from '../../campsitesSlice';
 import { selectFeaturedPromotions } from './promotions/promotionsSlice';
@@ -22,7 +22,7 @@ export const GetFeatures = () => {
       
       <Row>
       
-       {item.map((data, indNum) => (
+      {item.map((data, indNum) => (
         data &&(
         <Col md className='BASIS OFC m-1 mx-auto' key={indNum}>
         <AnimationCard data={data}/>

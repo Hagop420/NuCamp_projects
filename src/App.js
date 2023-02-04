@@ -10,8 +10,10 @@ import Header from './features/campsites/components/header';
 import Footer from './features/campsites/components/footer';
 import { fetchCampsites } from './features/campsites/campsitesSlice';
 import './App.css';
-import CampsiteIdPullDetails from '../src/features/campsites/components/CampsiteDetailPage'
-import {fetchPartners} from './features/campsites/partners/partnersSlice'
+import CampsiteDetailPage from '../src/features/campsites/components/CampsiteDetailPage'
+import { fetchPartners } from './features/campsites/partners/partnersSlice'
+import {fetchPromotions} from './features/campsites/components/display/promotions/promotionsSlice'
+// import CampsiteDetailPage from '../src/features/campsites/components/CampsiteDetailPage';
 
 
 // in jsx its the path and the location home is not # it's /
@@ -22,6 +24,7 @@ import {fetchPartners} from './features/campsites/partners/partnersSlice'
     useEffect(() => {
         dispatch(fetchCampsites());
         dispatch(fetchPartners());
+        dispatch(fetchPromotions());
     }, [dispatch]);
      return (
 
@@ -35,7 +38,7 @@ import {fetchPartners} from './features/campsites/partners/partnersSlice'
                 <Route path='contactInfo' element={<ContactPage />}/>
                 <Route
                     path='directory/:campsiteId'
-                    element={<CampsiteIdPullDetails />}/>
+                    element={<CampsiteDetailPage />}/>
             </Routes>
 
         <Footer />

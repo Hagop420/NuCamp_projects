@@ -17,15 +17,15 @@ const CampsiteDetailPage = () => {
 
    const isLoading = useSelector((state) => state.campsites.isLoading)
 
-   const err = useSelector((state) => state.campsites.errMsg)
+   const errMsg = useSelector((state) => state.campsites.errMsg)
 
    let content = null
    
 
    if (isLoading) {
       content=<Loading/>
-   }else if (err) {
-      content=<Error errMsg={err}/>
+   }else if (errMsg) {
+      content=<Error errMsg={errMsg}/>
    } else {
       content = (
          <>
