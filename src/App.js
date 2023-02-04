@@ -11,7 +11,7 @@ import Footer from './features/campsites/components/footer';
 import { fetchCampsites } from './features/campsites/campsitesSlice';
 import './App.css';
 import CampsiteIdPullDetails from '../src/features/campsites/components/CampsiteDetailPage'
-
+import {fetchPartners} from './features/campsites/partners/partnersSlice'
 
 
 // in jsx its the path and the location home is not # it's /
@@ -21,6 +21,7 @@ import CampsiteIdPullDetails from '../src/features/campsites/components/Campsite
      
     useEffect(() => {
         dispatch(fetchCampsites());
+        dispatch(fetchPartners());
     }, [dispatch]);
      return (
 

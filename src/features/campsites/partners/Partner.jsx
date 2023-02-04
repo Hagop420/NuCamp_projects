@@ -17,11 +17,7 @@ const Partner = ({partner}) => {
 }
 
 
-const nn = ['ass', 'hole', 'poop']
 
-var [toil, ppp, kak] = nn
-kak= 'kja'
-console.log(kak);
 
 
 export default Partner
