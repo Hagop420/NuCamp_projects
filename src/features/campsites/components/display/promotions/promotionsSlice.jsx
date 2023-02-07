@@ -54,7 +54,7 @@ export const promotionSliceReducer=promotionsSlice.reducer
 export const selectFeaturedPromotions = (state) => {
    return {
       featuredItem:state.promotion.promotionsArray.find(promotion => (
-         promotion.featuredx
+         promotion.featured
       )),
       isLoading:state.promotion.isLoading,
       errMsg:state.promotion.errMsg
