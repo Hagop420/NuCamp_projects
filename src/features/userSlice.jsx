@@ -11,7 +11,7 @@ const userSlice = createSlice({
    initialState,
    reducers: {
       setCurrentUser: (state, action) => {
-         const turningUserReturn =  { ...state, currentUser: action.payload }
+         const turningUserReturn =  { state, currentUser: action.payload }
          return  turningUserReturn
 
       }

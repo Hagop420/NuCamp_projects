@@ -14,13 +14,13 @@ const PartnersList = () => {
    const isLoading = useSelector((state) => state.partnersObj.isLoading)
    const errMsg = useSelector((state) => state.partnersObj.errMsg);
 
-    if (isLoading) {
-        return (
-            <Row>
-                <Loading/>
-            </Row>
-        )
-      }
+   //  if (isLoading) {
+   //      return (
+   //          <Row>
+   //              <Loading/>
+   //          </Row>
+   //      )
+   //    }
     
 
    

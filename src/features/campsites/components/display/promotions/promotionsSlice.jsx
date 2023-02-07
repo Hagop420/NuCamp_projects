@@ -37,7 +37,7 @@ const promotionsSlice = createSlice({
       [fetchPromotions.fulfilled]: (state, action) => {
           state.isLoading = false;
           state.errMsg = '';
-          state.partnersArray = mapImageURL(action.payload);
+          state.promotionsArray = mapImageURL(action.payload);
       },
       [fetchPromotions.rejected]: (state, action) => {
          state.isLoading = false;
@@ -52,7 +52,14 @@ export const promotionSliceReducer=promotionsSlice.reducer
 
 
 export const selectFeaturedPromotions = (state) => {
-   return state.promotion.promotionsArray.find(promotion => (
-      promotion.featured
-   ))
+   return {
+      featuredItem:state.promotion.promotionsArray.find(promotion => (
+         promotion.featured
+      )),
+      isLoading:state.promotion.isLoading,
+      errMsg:state.promotion.errMsg
+      
+   }
+   
+   
 }

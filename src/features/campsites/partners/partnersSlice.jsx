@@ -7,8 +7,12 @@ export const fetchPartners = createAsyncThunk(
    'partnersObj/fetchPartners',
    async () => {
        
-       const response = await fetch(baseUrl + 'partners');
+      const response = await fetch(baseUrl + 'partners');
       
+
+
+
+
            if (!response.ok) {
                return Promise.reject('Unable to fetch, status: '+ response.status);
            }
@@ -62,8 +66,13 @@ export const selectAllPartners = (state) => {
 
 
 export const selectFeaturedPartner = (state) => {
-   const findPartnerFeature = state.partnersObj.partnersArray.find(fndFeat =>fndFeat.featured === true)
+   return {
+      featuredItem: state.partnersObj.partnersArray.find
+         ((fndFeat => fndFeat.featured)),
+         isLoading:state.partnersObj.isLoading,
+         errMsg:state.partnersObj.errMsg
+   }
    
+ 
    
-   return findPartnerFeature
 }
