@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Button, Modal, ModalHeader, ModalBody, FormGroup, Label } from 'reactstrap'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import {validateCommentForm} from '../../../../utilities/validateCommentForm'
-import { addComment } from './commentsSlice';
+import { postComment } from './commentsSlice';
 
 
 const CommentForm = ({ campsiteId }) => {
@@ -21,7 +21,7 @@ const CommentForm = ({ campsiteId }) => {
       };
      console.log(`Normal form returned: ${comment}`);
      // console.log(`JSON FORMAT:`,JSON.stringify(comment));
-      dispatch(addComment(comment));
+      dispatch(postComment(comment));
       setModalOpen(false)
    }
    return (

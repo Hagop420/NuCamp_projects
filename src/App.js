@@ -13,6 +13,7 @@ import './App.css';
 import CampsiteDetailPage from '../src/features/campsites/components/CampsiteDetailPage'
 import { fetchPartners } from './features/campsites/partners/partnersSlice'
 import {fetchPromotions} from './features/campsites/components/display/promotions/promotionsSlice'
+import {fetchComments} from './features/campsites/components/Comments/commentsSlice';
 // import CampsiteDetailPage from '../src/features/campsites/components/CampsiteDetailPage';
 
 
@@ -25,6 +26,7 @@ import {fetchPromotions} from './features/campsites/components/display/promotion
         dispatch(fetchCampsites());
         dispatch(fetchPartners());
         dispatch(fetchPromotions());
+        dispatch(fetchComments());
     }, [dispatch]);
      return (
 
